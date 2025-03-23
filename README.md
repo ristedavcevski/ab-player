@@ -1,45 +1,55 @@
-# AB-Audio-Player
-<div id="top"></div>
+# A/B Audio Player for WordPress
 
-  <p align="center">
-    A HTML/CSS/Javascript-only audio player that allows you to toggle between two versions of the same audio file - with NO dependencies.
-What's it for? One pratical reason is the side-by-side comparison of different audio mixes/production processes.
-    <br />
-  </p>
-</div>
+A simple, beautiful A/B audio player that can be embedded in WordPress using a Custom HTML block. Perfect for comparing two audio files side by side.
 
-<h3 align="center"><a href="https://mattbartley.github.io/AB-Audio-Player/" target="_blank">VIEW DEMO 🎵</h3>
+## Features
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+- Clean, modern neumorphic design
+- Easy to use A/B comparison
+- Progress bar with seek functionality
+- Play/Pause and Stop controls
+- Mobile-friendly
+- Self-contained code (no external dependencies except Font Awesome)
 
-<!-- GETTING STARTED -->
+## Installation
 
-### Zero-Dependencies
-
-Built with only HTML, CSS, and Javascript.
-
-### Getting Started
-
-1. Simply add audio files to the assets folder (HTML supports MP3, WAV, and OGG). The files must have the same duration to work correctly.
-2. Update index.html player__wrapper div's attributes 'data-audio-a' and 'data-audio-b' with the location/filenames for each player. Example for two players:
+1. Open `wordpress-player.html` in your browser to preview how the player looks and works
+2. In the source code, locate the section between the comments that indicate what to copy
+3. Create a new Custom HTML block in your WordPress post/page
+4. Copy and paste the code from step 2 into the Custom HTML block
+5. Replace the audio file paths in the code:
    ```html
-   <div class="player__wrapper"
-        data-audio-a="./assets/sound1-a.mp3"
-        data-audio-b="./assets/sound1-b.mp3"
-   >
-   <div class="player__wrapper"
-        data-audio-a="./assets/sound2-a.mp3"
-        data-audio-b="./assets/sound2-b.mp3"
-   >
+   data-audio-a="PATH_TO_YOUR_FIRST_AUDIO.mp3"
+   data-audio-b="PATH_TO_YOUR_SECOND_AUDIO.mp3"
    ```
-3. There are some caveats with different browsers handling how the audio file is preloaded, muted, etc. Test thoroughly for production use.
+   with your actual audio file URLs
+6. Update the block
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Requirements
 
-### License
+- WordPress 5.0 or higher
+- Font Awesome 6.1.1 or higher (usually included in most WordPress themes)
+- If your theme doesn't include Font Awesome, you'll need to add it to your site
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-If you do use it, let me know - I'd love to see it in action!
+## Adding Font Awesome to WordPress
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+If your theme doesn't include Font Awesome, you can add it in one of these ways:
+
+1. Install a Font Awesome WordPress plugin, or
+2. Add this line to your theme's header:
+   ```html
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   ```
+
+## Multiple Players
+
+You can add multiple players to the same page by copying the player HTML structure multiple times within the same Custom HTML block. The CSS and JavaScript will work for all instances automatically.
+
+## Customization
+
+The player uses a neumorphic design with a light gray color scheme. You can customize the appearance by modifying the CSS variables in the style section of the code.
+
+## Support
+
+For support, please open an issue in this repository.
 
