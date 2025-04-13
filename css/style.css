@@ -98,7 +98,6 @@ a {
 .player__wrapper {
   border-radius: 50px;
   background: #e6e6e6;
-  box-shadow: 20px 20px 37px #cdcdcd, -20px -20px 37px #ffffff;
   padding: 4vh 5.5vw 4.5vh 5.5vw;
   max-width: 500px;
   align-self: start;
