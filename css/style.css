@@ -219,4 +219,8 @@ button:hover {
   .players {
     grid-template-columns: 1fr;
   }
+
+  iframe {
+    height: 600px;
+  }
 }
